@@ -38,7 +38,9 @@ form.addEventListener('submit', sendForm);
 
 function sendForm(event){
 event.preventDefault();
-if (emailInput.value !== '' && messageInput.value !==''){
+if (emailInput.value === "" || messageInput.value === "" ){
+    alert('Please fill in all the fields');
+} else { (emailInput.value !== '' && messageInput.value !=='')
     clearForm();
     console.log({
         email: emailInput.value,

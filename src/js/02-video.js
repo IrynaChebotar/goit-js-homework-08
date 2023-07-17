@@ -13,14 +13,7 @@ localStorage.setItem('videoplayer-current-time', currentTime);
 }
 const savedTime = localStorage.getItem('videoplayer-current-time');
 if (savedTime){
-    player.setCurrentTime(parseFloat(savedTime)).catch(function (error){
-        switch (error.name) {
-            case 'RangeError':
-                break;
-            default:
-                break;
-    }
-});
+    player.setCurrentTime(parseFloat(savedTime))
 }
 
     
