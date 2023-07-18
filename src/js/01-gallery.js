@@ -26,12 +26,8 @@ const galleryItemsMarkup =
 
 galleryEl.insertAdjacentHTML("afterbegin", galleryItemsMarkup);
 galleryEl.style.listStyle = 'none';
-galleryEl.addEventListener("click", openImg);
 
-function openImg(event){
-    event.preventDefault();
-    };
-    const Lightbox =  new SimpleLightbox('.gallery a', {
+    const lightbox =  new SimpleLightbox('.gallery a', {
                 captionsData: 'alt',
                 captionDelay: 250,
              }); 

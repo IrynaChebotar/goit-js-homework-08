@@ -8,7 +8,7 @@ const storegeKey = 'feedback-form-state';
 
 
 const userInfo = () => {
-const formData = {
+let formData = {
 email: emailInput.value,
 message: messageInput.value,
 };
@@ -40,7 +40,7 @@ function sendForm(event){
 event.preventDefault();
 if (emailInput.value === "" || messageInput.value === "" ){
     alert('Please fill in all the fields');
-} else { (emailInput.value !== '' && messageInput.value !=='')
+} else {
     clearForm();
     console.log({
         email: emailInput.value,
