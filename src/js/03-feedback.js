@@ -13,12 +13,13 @@ email: emailInput.value,
 message: messageInput.value,
 };
 localStorage.setItem(storegeKey, JSON.stringify(formData));
+return formData;
 }
 
 const loadForm = () => {
     const savedInfo = localStorage.getItem(storegeKey);
     if (savedInfo){
-        formData = JSON.parse(savedInfo);
+       const formData = JSON.parse(savedInfo);
        emailInput.value = formData.email;
        messageInput.value = formData.message;
     };
